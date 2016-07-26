@@ -34,14 +34,14 @@
       "mocha": true
     }
   },
-  "repository": "emir01/socket-io-express",
+  
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
   "license": "MIT",
   "dependencies": {
-    "express": "^4.14.0",
+    "express": "4.14.0",
     "gulp-live-server": "0.0.30"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "name": "socket-io-express",
+  "description": "Following Tutorial for Socket.Io",
+  "main": "lib/server.js",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/emir01/socket-io-node-chat",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+
+  "dependencies": {
+    "bootstrap": "~3.3.7"
+  }
+}
