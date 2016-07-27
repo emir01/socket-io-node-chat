@@ -4,13 +4,55 @@
     <title></title>
     <meta charset="utf-8" />
     <link href="content/main.css" rel="stylesheet" />
+
     <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="content/bootstrap-extension.css" rel="stylesheet" />
 </head>
 
 <body>
+    <!-- Begin page content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="full-hv-container">
+                    <div id="messagesContainer" class="card">
+                        <h3 class="card-header">
+                            Messages
+                            <button id="test_ui_recieved" class="btn btn-default btn-sm"> Test UI Recieved Message </button>
+                        </h3>
+                        <div class="card-block" id="messageListContainer">
+                            <ul id="messagesList"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-xs-12 col-sm-10">
+                            <input id="messageText" type="text" class="form-control" placeholder="Type your message here" />
+                        </div>
+
+                        <div class="col-xs-12 col-sm-2 p text-center-xs tex">
+                            <button id="sendMessageButton" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/tether/dist/js/tether.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="scripts/index.js"></script>
 
 </html>
