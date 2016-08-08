@@ -1,4 +1,10 @@
-﻿(function () {
+(function (chat) {
+    chat.messages = {
+        printMessage: _printMessage,
+        processMyMessage: _processMyMessage,
+        buildMessageItem: _buildMessageItem
+    };
+
     function _printMessage(text, isUserSender) {
         var messagesListContainer = $("#messagesList");
         messagesListContainer.append(_buildMessageItem(text, isUserSender));
@@ -11,10 +17,14 @@
         var message = messageTextBox.val();
         messageTextBox.val("");
 
-        // process socket
-
-        // print the message
-        _printMessage(message, true);
+        if (message && message.trim() != "") {
+            // print the message
+            _printMessage(message, true);
+            return message;
+        }
+        else {
+            return null;
+        }
     }
 
     function _buildMessageItem(text, isUserSender) {
@@ -33,20 +43,4 @@
 
         return listItem;
     }
-
-    $("#sendMessageButton").on('click', function () {
-        _processMyMessage();
-    });
-
-    $("#messageText").on('keydown', function (e) {
-        if (e.which === 13) {
-            e.preventDefault();
-            _processMyMessage();
-        }
-    });
-
-    $("#test_ui_recieved").on('click', function (e) {
-        var rand = Math.round(Math.random() * 100);
-        _printMessage("Testing Recieved Message " + rand, false);
-    });
-})();
+})(window.chat = window.chat || {})

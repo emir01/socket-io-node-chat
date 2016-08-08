@@ -34,7 +34,6 @@
       "mocha": true
     }
   },
-  
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
@@ -42,6 +41,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "4.14.0",
-    "gulp-live-server": "0.0.30"
+    "gulp-live-server": "0.0.30",
+    "socket.io": "^1.4.8"
   }
 }
